@@ -2,7 +2,7 @@
   "name": "angular-packery",
   "version": "0.1.0",
   "description": "Angular directive for integrating with Packery by metafizzy.",
-  "main": "angular-packery.js",
+  "main": "src/angular-packery.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +22,12 @@
   },
   "homepage": "https://github.com/jamesbs/angular-packery#readme",
   "peerDependencies": {
-    "packery": "~1.4"
+    "packery": "~1"
+  },
+  "devDependencies": {
+    "eslint": "~1",
+    "gulp": "~3",
+    "gulp-debug": "^2.1.2",
+    "gulp-eslint": "~1"
   }
 }
