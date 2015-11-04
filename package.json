@@ -1,0 +1,27 @@
+{
+  "name": "angular-packery",
+  "version": "0.1.0",
+  "description": "Angular directive for integrating with Packery by metafizzy.",
+  "main": "angular-packery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesbs/angular-packery.git"
+  },
+  "keywords": [
+    "angular",
+    "packery",
+    "directive"
+  ],
+  "author": "j@jamesbs.com",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jamesbs/angular-packery/issues"
+  },
+  "homepage": "https://github.com/jamesbs/angular-packery#readme",
+  "peerDependencies": {
+    "packery": "~1.4"
+  }
+}
