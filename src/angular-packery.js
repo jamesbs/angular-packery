@@ -23,6 +23,8 @@
                 load();
                 return load;
             };
+
+            loadPackery = function() {};
         };
 
         return {
