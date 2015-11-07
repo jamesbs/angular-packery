@@ -31,15 +31,23 @@
             restrict: 'E',
             scope: {
                 options: '=',
-                loadOn: '@'
+                loadOn: '@',
+                loadWatch: '@'
             },
             template: '<div class="tile-grid" ng-transclude></div>',
             transclude: true,
             controller: ['$scope', function($scope) {
-                var loadOnEvent = $scope.loadOn;
+                // listen in on event
+                if($scope.loadOn) {
+                    $scope.$on($scope.loadOn, function() {
+                        loadPackery();
+                    });
+                }
 
-                if(loadOnEvent) {
-                    $scope.$on(loadOnEvent, function() {
+                // listen in on expression
+
+                if($scope.loadWatch) {
+                    $scope.$on($scope.loadWatch, function() {
                         loadPackery();
                     });
                 }
