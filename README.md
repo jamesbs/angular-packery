@@ -5,12 +5,14 @@ Angular directive as a light wrapper around [packery](http://packery.metafizzy.c
 ## Usage
 
 
-```javascript:directives.js
+```javascript
+directives.js
 
 app.directive('packery', require('angular-packery'));
 ```
 
-```html:my-view.html
+```html
+my-view.html
 
 <packery options="{ itemSelector : '.packery-item', gutter : 6 }" loadOn="startPackery">
   <div class="packery-item">1</div>
@@ -18,7 +20,8 @@ app.directive('packery', require('angular-packery'));
 </packery>
 ```
 
-```javascript:my-controller.js
+```javascript
+my-controller.js
 
 $scope.$broadcast('startPackery'); // fire packery
 ```
