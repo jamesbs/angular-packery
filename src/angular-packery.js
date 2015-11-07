@@ -1,8 +1,15 @@
-(function() {
+(function(root, factory) {
     'use strict';
-    var Packery = require('packery');
 
-    module.exports = function() {
+    if (typeof define === 'function' && define.amd) {
+        define(['packery'], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        module.exports = factory(require('packery'));
+    } else {
+        root.angularPackery = factory(root.Packery);
+    }
+})(this, function(Packery) {
+    return function() {
         /*
         *  generates the function with the proper directive scope to be 
         *  called on packery load triggers
@@ -45,7 +52,6 @@
                 }
 
                 // listen in on expression
-
                 if($scope.loadWatch) {
                     $scope.$on($scope.loadWatch, function() {
                         loadPackery();
@@ -56,5 +62,5 @@
                 loadPackery = generateLoad(element, $scope.options);
             }
         };
-    };
-})();
+    }
+});
